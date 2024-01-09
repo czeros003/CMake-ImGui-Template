@@ -1,0 +1,41 @@
+# Pliki wygenerowane przez CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+compile_commands.json
+Makefile
+Testing/
+
+# Pliki wygenerowane przez Visual Studio Code
+.vscode/
+
+# Pliki wygenerowane przez Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Pliki wygenerowane przez Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Pliki wygenerowane przez systemy operacyjne
+.DS_Store
+Thumbs.db
+
+# Pliki tymczasowe
+*.log
+*.swp
+
+# Wyłącz wszystkie podfoldery w folderze libs
+/libs/*/
+
+# Pliki związane z IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iws
+.idea_modules/
+out/

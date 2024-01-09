@@ -1,4 +1,4 @@
-﻿add_executable(${PROJECT_NAME} CMakeProject.cpp)
+﻿add_executable(${PROJECT_NAME} CMakeProject.cpp "Editor.cpp" "Editor.h")
 
 # Link libraries with executable
 target_link_libraries(${PROJECT_NAME} PRIVATE imgui implot)

@@ -1,11 +1,15 @@
-#include "Editor.h"
+﻿#include "Editor.h"
 #include <imgui.h>
+#include <implot.h>
 
 namespace Editor
 {
-    void Render()
+    void RenderPlot(const std::vector<float>& data, const char* plotTitle)
     {
-        // Cos co chcesz renderowac co klatke
+        if (ImPlot::BeginPlot(plotTitle)) {
+            ImPlot::PlotLine("Line Plot", data.data(), static_cast<int>(data.size()));
+            ImPlot::EndPlot();
+        }
     }
 
     void DrawMultilineColoredText(const std::string& text) {

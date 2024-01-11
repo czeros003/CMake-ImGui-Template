@@ -36,6 +36,12 @@ int main() {
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
+    // Inicjalizacja ImPlot
+    ImPlot::CreateContext();
+
+    // Dane do wykresu
+    std::vector<float> values = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f };
+
     // Główna pętla
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -51,7 +57,13 @@ int main() {
         * ------------------------------------------------------------------------------------------------------------------------------------
         */
 
-        Editor::Render();
+        ImGui::Begin("Hello, ImGui!");
+        ImGui::Text("This is a simple ImGui window.");
+
+        // Wywołanie funkcji generującej wykres
+        Editor::RenderPlot(values, "My Plot");
+
+        ImGui::End();
 
         // Kod do kolorowania składni
         std::string pythonCode = "def hello_world():\n\tprint('Hello, World!')";
